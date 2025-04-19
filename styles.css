@@ -1,0 +1,91 @@
+body {
+    background-color: #f0e68c;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    padding: 50px;
+}
+
+.title {
+    font-size: 3em;
+    color: #ff6f61;
+    animation: fadeIn 2s;
+}
+
+.message {
+    font-size: 1.5em;
+    color: #333;
+    margin: 20px 0;
+    animation: fadeIn 2s 0.5s;
+}
+
+.balloons {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.balloon {
+    width: 50px;
+    height: 80px;
+    background-color: #ff6f61;
+    border-radius: 25px 25px 0 0;
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+    animation: float 3s infinite;
+}
+
+.balloon1 { background-color: #ff6f61; }
+.balloon2 { background-color: #6fa3ff; }
+.balloon3 { background-color: #ffcc5c; }
+.balloon4 { background-color: #88d8b0; }
+
+.balloon:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wish-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    animation: fadeIn 2s 1s;
+}
+
+.wish {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
+    display: none;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
